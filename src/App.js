@@ -1,9 +1,26 @@
 import React from "react";
-import "App.scss";
-
+import Sidebar from "components/Sidebar";
+import { Switch,Route } from "react-router-dom";
+import News from 'components/News';
 
 function App() {
- return <div>fdg</div>
+ return <main> 
+  <Sidebar/>
+  <Switch>
+    <Route path="/feed">
+      <News/>
+    </Route>
+    <Route path="/messages">
+
+    </Route>
+    <Route path="/friends">
+
+    </Route>
+    <Route path="/favorite">
+
+    </Route>
+  </Switch>
+ </main>
 }
 
 export default App;
