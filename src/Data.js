@@ -27,16 +27,71 @@ export const dataNews = {
     authorID:2,
     timePost:'23.01.2021',
     postText:'Hello Guys'
+  },
+  3:{
+    authorID:3,
+    timePost:'24.01.2021',
+    postText:'Freedom!'
+  },
+  4:{
+    authorID:4,
+    timePost:'26.01.2021',
+    postText:'My cat is die('
   }
 };
 
 export const dataUsers = {
   1:{
     name:'David',
-    avatar: 'src/assets/image/avatars/1.jpg'
+    avatar: 'src/assets/image/avatars/1.jpg',
+    messages: {
+      2:{
+        idInterlocutor:2,
+        history: [
+          {
+            idUser:1,
+            text:'hi'
+          },
+          {
+            idUser:2,
+            text:'hi'
+          },
+          {
+            idUser:1,
+            text:'how are you?'
+          }
+        ]
+      },
+      3:{
+        idInterlocutor:3,
+        history: [
+          {
+            idUser:1,
+            text:'hello'
+          },
+          {
+            idUser:3,
+            text:'hi'
+          },
+          {
+            idUser:1,
+            text:'where are you?'
+          }
+        ]
+      }
+    },
+    friends:[3,4]
   },
   2:{
     name:'James',
+    avatar: 'src/assets/image/avatars/2.png'
+  },
+  3:{
+    name:'Julia',
+    avatar: 'src/assets/image/avatars/3.png'
+  },
+  4:{
+    name:'Max',
     avatar: 'src/assets/image/avatars/1.jpg'
   }
 };
