@@ -17,8 +17,14 @@ const Chat = ({ idUser, idInterlocutor }) => <article className="chat">
   </article>;
 
 Chat.propTypes = {
-  idUser: PropTypes.number,
-  idInterlocutor: PropTypes.string,
+  idUser: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  idInterlocutor: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
 };
 
 export default Chat;

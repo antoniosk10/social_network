@@ -17,7 +17,7 @@ const NewsItem = ({ data, isLiked, id, toggleLikePost }) => <article className="
   </div>
   <p>{data.postText}</p>
   <div className="actions-post">
-    <button className="action-btn" onClick={toggleLikePost} data-id-post={id}>
+    <button className="action-btn action-btn--white" onClick={toggleLikePost} data-id-post={id}>
       <img src={isLiked ? iconLikeFill : iconLike} alt="like"/>
     </button>
     <button className="action-btn"> <img src={iconShare} alt="share"/></button>
