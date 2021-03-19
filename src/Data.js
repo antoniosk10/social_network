@@ -50,15 +50,18 @@ export const dataUsers = {
         history: [
           {
             idUser:1,
-            text:'hi'
+            text:'hi',
+            isLiked:true
           },
           {
             idUser:2,
-            text:'hi'
+            text:'hi',
+            isLiked:true
           },
           {
             idUser:1,
-            text:'how are you?'
+            text:'how are you?',
+            isLiked:false
           }
         ]
       },
@@ -67,15 +70,18 @@ export const dataUsers = {
         history: [
           {
             idUser:1,
-            text:'hello'
+            text:'hello',
+            isLiked:true
           },
           {
             idUser:3,
-            text:'hi'
+            text:'hi',
+            isLiked:false
           },
           {
             idUser:1,
-            text:'where are you?'
+            text:'where are you?',
+            isLiked:false
           }
         ]
       }
