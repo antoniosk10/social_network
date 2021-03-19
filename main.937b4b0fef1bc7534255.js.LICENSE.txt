@@ -1,0 +1,416 @@
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+
+/*! !!../node_modules/css-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./App.scss */
+
+/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */
+
+/*! ../node_modules/css-loader/dist/runtime/api.js */
+
+/*! ../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */
+
+/*! ./checkPropTypes */
+
+/*! ./cjs/react-dom.development.js */
+
+/*! ./cjs/react-is.development.js */
+
+/*! ./cjs/react.development.js */
+
+/*! ./cjs/scheduler-tracing.development.js */
+
+/*! ./cjs/scheduler.development.js */
+
+/*! ./factoryWithTypeCheckers */
+
+/*! ./lib/ReactPropTypesSecret */
+
+/*! ./setPrototypeOf.js */
+
+/*! @babel/runtime/helpers/esm/extends */
+
+/*! @babel/runtime/helpers/esm/inheritsLoose */
+
+/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */
+
+/*! App */
+
+/*! App.scss */
+
+/*! Data */
+
+/*! assets/image/cross.svg */
+
+/*! assets/image/like-fill.svg */
+
+/*! assets/image/like-message-fill.svg */
+
+/*! assets/image/like-message.svg */
+
+/*! assets/image/like.svg */
+
+/*! assets/image/message.svg */
+
+/*! assets/image/send.svg */
+
+/*! assets/image/share.svg */
+
+/*! components/Chat */
+
+/*! components/ChatPreview */
+
+/*! components/ChatsList */
+
+/*! components/FriendItem */
+
+/*! components/FriendsPage */
+
+/*! components/Message */
+
+/*! components/MessagesPage */
+
+/*! components/News */
+
+/*! components/NewsItem */
+
+/*! components/Popup */
+
+/*! components/Sidebar */
+
+/*! components/Widget */
+
+/*! history */
+
+/*! hoist-non-react-statics */
+
+/*! isarray */
+
+/*! localStorageUtil */
+
+/*! mini-create-react-context */
+
+/*! object-assign */
+
+/*! path-to-regexp */
+
+/*! prop-types */
+
+/*! react */
+
+/*! react-dom */
+
+/*! react-is */
+
+/*! react-router */
+
+/*! react-router-dom */
+
+/*! resolve-pathname */
+
+/*! scheduler */
+
+/*! scheduler/tracing */
+
+/*! tiny-invariant */
+
+/*! tiny-warning */
+
+/*! value-equal */
+
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+
+/*!*********************!*\
+  !*** ./src/Data.js ***!
+  \*********************/
+
+/*!**********************!*\
+  !*** ./src/App.scss ***!
+  \**********************/
+
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+
+/*!*********************************!*\
+  !*** ./src/components/Chat.jsx ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/components/News.jsx ***!
+  \*********************************/
+
+/*!*********************************!*\
+  !*** ./src/localStorageUtil.js ***!
+  \*********************************/
+
+/*!**********************************!*\
+  !*** ./src/components/Popup.jsx ***!
+  \**********************************/
+
+/*!***********************************!*\
+  !*** ./src/assets/image/like.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/assets/image/send.svg ***!
+  \***********************************/
+
+/*!***********************************!*\
+  !*** ./src/components/Widget.jsx ***!
+  \***********************************/
+
+/*!************************************!*\
+  !*** ./src/assets/image/cross.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/assets/image/share.svg ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/components/Message.jsx ***!
+  \************************************/
+
+/*!************************************!*\
+  !*** ./src/components/Sidebar.jsx ***!
+  \************************************/
+
+/*!*************************************!*\
+  !*** ./node_modules/react/index.js ***!
+  \*************************************/
+
+/*!*************************************!*\
+  !*** ./src/components/NewsItem.jsx ***!
+  \*************************************/
+
+/*!**************************************!*\
+  !*** ./src/assets/image/message.svg ***!
+  \**************************************/
+
+/*!**************************************!*\
+  !*** ./src/components/ChatsList.jsx ***!
+  \**************************************/
+
+/*!***************************************!*\
+  !*** ./src/components/FriendItem.jsx ***!
+  \***************************************/
+
+/*!****************************************!*\
+  !*** ./node_modules/react-is/index.js ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/assets/image/like-fill.svg ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/components/ChatPreview.jsx ***!
+  \****************************************/
+
+/*!****************************************!*\
+  !*** ./src/components/FriendsPage.jsx ***!
+  \****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/react-dom/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./node_modules/scheduler/index.js ***!
+  \*****************************************/
+
+/*!*****************************************!*\
+  !*** ./src/components/MessagesPage.jsx ***!
+  \*****************************************/
+
+/*!******************************************!*\
+  !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+
+/*!*******************************************!*\
+  !*** ./node_modules/scheduler/tracing.js ***!
+  \*******************************************/
+
+/*!*******************************************!*\
+  !*** ./src/assets/image/like-message.svg ***!
+  \*******************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/history/esm/history.js ***!
+  \*********************************************/
+
+/*!*********************************************!*\
+  !*** ./node_modules/object-assign/index.js ***!
+  \*********************************************/
+
+/*!************************************************!*\
+  !*** ./src/assets/image/like-message-fill.svg ***!
+  \************************************************/
+
+/*!***************************************************!*\
+  !*** ./node_modules/prop-types/checkPropTypes.js ***!
+  \***************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/react/cjs/react.development.js ***!
+  \*****************************************************/
+
+/*!*****************************************************!*\
+  !*** ./node_modules/value-equal/esm/value-equal.js ***!
+  \*****************************************************/
+
+/*!*******************************************************!*\
+  !*** ./node_modules/react-router/esm/react-router.js ***!
+  \*******************************************************/
+
+/*!***********************************************************!*\
+  !*** ./node_modules/react-is/cjs/react-is.development.js ***!
+  \***********************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \************************************************************/
+
+/*!************************************************************!*\
+  !*** ./node_modules/tiny-warning/dist/tiny-warning.esm.js ***!
+  \************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
+  \*************************************************************/
+
+/*!*************************************************************!*\
+  !*** ./node_modules/scheduler/cjs/scheduler.development.js ***!
+  \*************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
+  \***************************************************************/
+
+/*!***************************************************************!*\
+  !*** ./node_modules/resolve-pathname/esm/resolve-pathname.js ***!
+  \***************************************************************/
+
+/*!****************************************************************!*\
+  !*** ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js ***!
+  \****************************************************************/
+
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-router/node_modules/isarray/index.js ***!
+  \*****************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+
+/*!******************************************************************!*\
+  !*** ./node_modules/mini-create-react-context/dist/esm/index.js ***!
+  \******************************************************************/
+
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************/
+
+/*!*********************************************************************!*\
+  !*** ./node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
+  \*********************************************************************/
+
+/*!************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
+  \************************************************************************/
+
+/*!************************************************************************!*\
+  !*** ./node_modules/react-router/node_modules/path-to-regexp/index.js ***!
+  \************************************************************************/
+
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+
+/*!**********************************************************************************!*\
+  !*** ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js ***!
+  \**********************************************************************************/
+
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/App.scss ***!
+  \***************************************************************************************************/
+
+/**
+ * Checks if an event is supported in the current execution environment.
+ *
+ * NOTE: This will not work correctly for non-generic events such as `change`,
+ * `reset`, `load`, `error`, and `select`.
+ *
+ * Borrows from Modernizr.
+ *
+ * @param {string} eventNameSuffix Event name, e.g. "click".
+ * @return {boolean} True if the event is supported.
+ * @internal
+ * @license Modernizr 3.0.0pre (Custom Build) | MIT
+ */
+
+/** @license React v0.20.1
+ * scheduler-tracing.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v0.20.1
+ * scheduler.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v16.13.1
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.1
+ * react-dom.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/** @license React v17.0.1
+ * react.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
