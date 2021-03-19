@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import iconLike from 'assets/image/like-message.svg'
 import iconLikeFill from 'assets/image/like-message-fill.svg'
 import iconCross from 'assets/image/cross.svg'
-import { dataUsers } from 'Data';
+import { dataUsers, dataNews } from 'Data';
+import NewsItem from 'components/NewsItem';
 
 const Message = ({ isMyMessage, messageText, isLiked, changeHistory, idInterlocutor, idUser, index }) => 
-  <div className={isMyMessage ? 'message my-message':'message other-message'}>
-    <span>{messageText}</span>
+  <div className={isMyMessage ? 'message my-message':'message'}>
+    {typeof messageText === 'object' ? <NewsItem 
+      id={messageText.idNews}
+      data={dataNews[messageText.idNews]}
+      isShare={true}/> : <span>{messageText}</span>
+    }
   <div className="actions-message">
     <button className="action-btn" onClick={()=>{
       const { history } = dataUsers[idUser].messages[idInterlocutor];
@@ -27,7 +32,10 @@ const Message = ({ isMyMessage, messageText, isLiked, changeHistory, idInterlocu
 
 Message.propTypes = {
   isMyMessage: PropTypes.bool,
-  messageText: PropTypes.string,
+  messageText: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ]),
   isLiked: PropTypes.bool,
   changeHistory: PropTypes.func,
   idUser: PropTypes.oneOfType([

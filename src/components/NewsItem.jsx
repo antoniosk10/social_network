@@ -5,7 +5,7 @@ import iconLike from 'assets/image/like.svg'
 import iconLikeFill from 'assets/image/like-fill.svg'
 import iconShare from 'assets/image/share.svg'
 
-const NewsItem = ({ data, isLiked, id, toggleLikePost }) => <article className="post">
+const NewsItem = ({ data, isLiked, id, toggleLikePost, showPopup, isShare }) => <article className="post">
   <div className="post-title">
     <div className="avatar">
         <img src={dataUsers[data.authorID].avatar} alt={`avatar_${dataUsers[data.authorID].name}`}/>
@@ -16,20 +16,27 @@ const NewsItem = ({ data, isLiked, id, toggleLikePost }) => <article className="
     </div>
   </div>
   <p>{data.postText}</p>
-  <div className="actions-post">
+  {isShare ? null : <div className="actions-post">
     <button className="action-btn action-btn--white" onClick={toggleLikePost} data-id-post={id}>
       <img src={isLiked ? iconLikeFill : iconLike} alt="like"/>
     </button>
-    <button className="action-btn"> <img src={iconShare} alt="share"/></button>
+    <button className="action-btn" data-id-post={id} onClick={showPopup}> <img src={iconShare} alt="share"/></button>
   </div>
+  }
+  
  </article>
  
 NewsItem.propTypes = {
   data: PropTypes.object,
   isLiked: PropTypes.bool,
   likePost: PropTypes.func,
-  id: PropTypes.string,
-  toggleLikePost: PropTypes.func
+  id: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
+  toggleLikePost: PropTypes.func,
+  showPopup: PropTypes.func,
+  isShare: PropTypes.bool
 };
 
 export default NewsItem;

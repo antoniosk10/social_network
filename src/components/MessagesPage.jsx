@@ -15,7 +15,7 @@ const MessagesPage = ({ idUser, idInterlocutor }) => {
   },[]) 
 
   return <section className="message-page">
-    <h1>Messages</h1>
+    <h2>Messages</h2>
     <div className="message-list">
       <ChatsList idUser={idUser} toggleChat={(id) => {
         changeHistory(dataUsers[idUser].messages[id].history);

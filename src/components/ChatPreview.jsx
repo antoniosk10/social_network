@@ -13,7 +13,7 @@ const ChatPreview = ({ idInterlocutor, toggleChat, idUser, isActive }) => {
     </div>
     <div className="message-preview-info">
       <p>{dataUsers[idInterlocutor].name}</p>
-      <p className="last-message">{lastMessage}</p>
+      <p className="last-message">{typeof lastMessage === 'object' ? 'Post' : lastMessage}</p>
     </div>
   </article>
 }

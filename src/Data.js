@@ -19,21 +19,25 @@ export const dataMenu = [
 
 export const dataNews = {
   1:{
+    idNews:1,
     authorID:1,
     timePost:'22.01.2021',
     postText:'Hello World'
   },
   2:{
+    idNews:2,
     authorID:2,
     timePost:'23.01.2021',
     postText:'Hello Guys'
   },
   3:{
+    idNews:3,
     authorID:3,
     timePost:'24.01.2021',
     postText:'Freedom!'
   },
   4:{
+    idNews:4,
     authorID:4,
     timePost:'26.01.2021',
     postText:'My cat is die('
@@ -84,9 +88,39 @@ export const dataUsers = {
             isLiked:false
           }
         ]
+      },
+      4:{
+        idInterlocutor:4,
+        history: [
+          {
+            idUser:1,
+            text:'hello',
+            isLiked:true
+          },
+          {
+            idUser:4,
+            text:'hi',
+            isLiked:false
+          },
+          {
+            idUser:1,
+            text:'where are you?',
+            isLiked:false
+          },
+          {
+            idUser:1,
+            text:'I miss you!',
+            isLiked:false
+          },
+          {
+            idUser:1,
+            text:'LOL',
+            isLiked:false
+          }
+        ]
       }
     },
-    friends:[3,4]
+    friends:[2,3,4]
   },
   2:{
     name:'James',

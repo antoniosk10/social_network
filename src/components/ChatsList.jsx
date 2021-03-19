@@ -14,9 +14,10 @@ const ChatsList = ({ idUser, toggleChat, activeChatID}) => {
       ]
     }
   }
- 
+  
   return <article className="chats-list">
-    { Object.keys(chatList).map((el,index) => <ChatPreview 
+    {
+    Object.keys(chatList).map((el,index) => <ChatPreview 
     key={index} 
     toggleChat={toggleChat} 
     idUser={idUser} 
